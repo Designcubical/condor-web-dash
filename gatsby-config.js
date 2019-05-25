@@ -38,6 +38,12 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: "gatsby-transformer-remark",
+            options: {
+              plugins: ["gatsby-remark-component"]
+            }
+          },
+          {
             resolve: 'gatsby-remark-relative-images',
             options: {
               name: 'uploads',
