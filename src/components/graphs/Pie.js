@@ -1,44 +1,124 @@
-import * as React from "react";
-import { Chart } from "react-google-charts";
+import React from 'react'
+import { ResponsivePie } from '@nivo/pie'
+// make sure parent container have a defined height when using
+// responsive component, otherwise height will be 0 and
+// no chart will be rendered.
+// website examples showcase many properties,
+// you'll often use just a few of them.
+const Pie3 = ({ data /* see data tab */ }) => (
+    <ResponsivePie
+        data={data}
+        margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+        innerRadius={0.5}
+        padAngle={0.7}
+        cornerRadius={3}
+        colors={{ scheme: 'nivo' }}
+        borderWidth={1}
+        borderColor={{ from: 'color', modifiers: [ [ 'darker', 0.2 ] ] }}
+        radialLabelsSkipAngle={10}
+        radialLabelsTextXOffset={6}
+        radialLabelsTextColor="#333333"
+        radialLabelsLinkOffset={0}
+        radialLabelsLinkDiagonalLength={16}
+        radialLabelsLinkHorizontalLength={24}
+        radialLabelsLinkStrokeWidth={1}
+        radialLabelsLinkColor={{ from: 'color' }}
+        slicesLabelsSkipAngle={10}
+        slicesLabelsTextColor="#333333"
+        animate={true}
+        motionStiffness={90}
+        motionDamping={15}
+        defs={[
+            {
+                id: 'dots',
+                type: 'patternDots',
+                background: 'inherit',
+                color: 'rgba(255, 255, 255, 0.3)',
+                size: 4,
+                padding: 1,
+                stagger: true
+            },
+            {
+                id: 'lines',
+                type: 'patternLines',
+                background: 'inherit',
+                color: 'rgba(255, 255, 255, 0.3)',
+                rotation: -45,
+                lineWidth: 6,
+                spacing: 10
+            }
+        ]}
+        fill={[
+            {
+                match: {
+                    id: 'ruby'
+                },
+                id: 'dots'
+            },
+            {
+                match: {
+                    id: 'c'
+                },
+                id: 'dots'
+            },
+            {
+                match: {
+                    id: 'go'
+                },
+                id: 'dots'
+            },
+            {
+                match: {
+                    id: 'python'
+                },
+                id: 'dots'
+            },
+            {
+                match: {
+                    id: 'scala'
+                },
+                id: 'lines'
+            },
+            {
+                match: {
+                    id: 'lisp'
+                },
+                id: 'lines'
+            },
+            {
+                match: {
+                    id: 'elixir'
+                },
+                id: 'lines'
+            },
+            {
+                match: {
+                    id: 'javascript'
+                },
+                id: 'lines'
+            }
+        ]}
+        legends={[
+            {
+                anchor: 'bottom',
+                direction: 'row',
+                translateY: 56,
+                itemWidth: 100,
+                itemHeight: 18,
+                itemTextColor: '#999',
+                symbolSize: 18,
+                symbolShape: 'circle',
+                effects: [
+                    {
+                        on: 'hover',
+                        style: {
+                            itemTextColor: '#000'
+                        }
+                    }
+                ]
+            }
+        ]}
+    />
+)
 
-export default class Pie extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { dataLoadingStatus: false, chartData: [] }
-}
-async componentDidMount() {
-    const response = await fetch(
-        'https://api.exchangeratesapi.io/latest?symbols=USD,GBP,CAD',
-    )
-    const json = await response.json()
-    const rateCurrencyNames = Object.keys(json.rates)
-    const rateCurrencyValues = Object.values(json.rates)
-    const chartData = [['Currency Name', 'Currency Rate']]
-    for (let i = 0; i < rateCurrencyNames.length; i += 1) {
-      chartData.push([rateCurrencyNames[i], rateCurrencyValues[i]])
-    }
-    this.setState({
-      dataLoadingStatus: true,
-      chartData: chartData,
-    })
-}
-
-  render() {
-    return (
-      <div className={"my-pretty-chart-container"}>
-        {this.state.dataLoadingStatus &&
-      <Chart
-        width={'500px'}
-        height={'300px'}
-        chartType="PieChart"
-        loader={<div>Loading Chart</div>}
-        data={this.state.chartData}
-        options={{
-            title: 'My Daily Activities',
-        }}
-        rootProps={{ 'data-testid': '1' }}
-        />}
-      </div>
-    );
-  }
-}
+export default Pie3;
