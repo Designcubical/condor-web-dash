@@ -10,6 +10,14 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
+      resolve: "gatsby-source-graphql",
+      options: {
+        fieldName: "condor",
+        url: "https://condor-api.herokuapp.com/graphql",
+        typeName: "Condor"
+      },
+    },
+    {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {

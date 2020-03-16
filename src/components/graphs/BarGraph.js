@@ -5,11 +5,20 @@ import { ResponsiveBar } from '@nivo/bar'
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
-const BarGraph2 = ({ data /* see data tab */ }) => (
+const subGroupToItem = (subgroup) => {
+    console.warn(subgroup)
+    return subgroup.subGroup.map((s) => {
+        return {
+            [s.name]: s.incl
+        }
+    })};
+
+const BarGraph2 = ({ data /* see data tab */ }) => {
+    return (
     <ResponsiveBar
-        data={data}
-        keys={[ 'hot dog', 'burger', 'sandwich', 'kebab', 'fries', 'donut' ]}
-        indexBy="country"
+        data={data[0].staffSystem[0].groups}
+        keys={[ 'incl']}
+        indexBy="name"
         margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
         padding={0.3}
         colors={{ scheme: 'nivo' }}
@@ -97,5 +106,6 @@ const BarGraph2 = ({ data /* see data tab */ }) => (
         motionStiffness={90}
         motionDamping={15}
     />
-)
+)}
+
 export default BarGraph2;

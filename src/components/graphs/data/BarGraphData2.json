@@ -1,0 +1,296 @@
+{
+  "data": {
+    "transactions": [
+      {
+        "staffSystem": [
+          {
+            "name": "triveco",
+            "groups": [
+              {
+                "name": "Mat",
+                "incl": 26324,
+                "subGroup": [
+                  {
+                    "name": "F�rr�tter",
+                    "incl": 119,
+                    "no": 1,
+                    "subGroup": [
+                      {
+                        "name": "Royaltoast",
+                        "incl": 119,
+                        "no": 1
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Varmr�tter",
+                    "incl": 25883,
+                    "no": 250,
+                    "subGroup": [
+                      {
+                        "name": "Barn",
+                        "incl": 65,
+                        "no": 1
+                      },
+                      {
+                        "name": "Lammfil� on the rocks",
+                        "incl": 259,
+                        "no": 1
+                      },
+                      {
+                        "name": "Ryggbiff on the rocks",
+                        "incl": 518,
+                        "no": 2
+                      },
+                      {
+                        "name": "Sallad takeaway",
+                        "incl": 59,
+                        "no": 1
+                      },
+                      {
+                        "name": "Frukost",
+                        "incl": 396,
+                        "no": 4
+                      },
+                      {
+                        "name": "F�retagsfrukost",
+                        "incl": 140,
+                        "no": 2
+                      },
+                      {
+                        "name": "Lunch Shoppingcentret",
+                        "incl": 178,
+                        "no": 2
+                      },
+                      {
+                        "name": "Oxfile on the rocks",
+                        "incl": 867,
+                        "no": 3
+                      },
+                      {
+                        "name": "Charlottenburgare",
+                        "incl": 398,
+                        "no": 2
+                      },
+                      {
+                        "name": "pasta",
+                        "incl": 537,
+                        "no": 3
+                      },
+                      {
+                        "name": "Lunch Eda Kommun",
+                        "incl": 252,
+                        "no": 3
+                      },
+                      {
+                        "name": "Engelbrekts Motor",
+                        "incl": 178,
+                        "no": 2
+                      },
+                      {
+                        "name": "Lunchkupong",
+                        "incl": 534,
+                        "no": 6
+                      },
+                      {
+                        "name": "Lunch Fundo",
+                        "incl": 712,
+                        "no": 8
+                      },
+                      {
+                        "name": "Lunch",
+                        "incl": 20790,
+                        "no": 210
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Desserter",
+                    "incl": 174,
+                    "no": 2,
+                    "subGroup": [
+                      {
+                        "name": "chokladfondant",
+                        "incl": 105,
+                        "no": 1
+                      },
+                      {
+                        "name": "sorbet",
+                        "incl": 69,
+                        "no": 1
+                      }
+                    ]
+                  },
+                  {
+                    "name": "�ppen Mat",
+                    "incl": 98,
+                    "no": 1,
+                    "subGroup": [
+                      {
+                        "name": "�ppen Mat",
+                        "incl": 98,
+                        "no": 1
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Tillval",
+                    "incl": 50,
+                    "no": 10,
+                    "subGroup": [
+                      {
+                        "name": "Baconlindad sparris",
+                        "incl": 50,
+                        "no": 2
+                      },
+                      {
+                        "name": "S�tpotatispommes",
+                        "incl": 0,
+                        "no": 1
+                      },
+                      {
+                        "name": "Potatisbakelse",
+                        "incl": 0,
+                        "no": 1
+                      },
+                      {
+                        "name": "Klyftpotatis",
+                        "incl": 0,
+                        "no": 4
+                      },
+                      {
+                        "name": "Pommes frites",
+                        "incl": 0,
+                        "no": 2
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Dryck Alkoholfritt",
+                "incl": 464,
+                "subGroup": [
+                  {
+                    "name": "Vatten",
+                    "incl": 354,
+                    "no": 12,
+                    "subGroup": [
+                      {
+                        "name": "Alkoholfri �l",
+                        "incl": 39,
+                        "no": 1
+                      },
+                      {
+                        "name": "Festis",
+                        "incl": 15,
+                        "no": 1
+                      },
+                      {
+                        "name": "L�sk",
+                        "incl": 300,
+                        "no": 10
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Kaffe",
+                    "incl": 110,
+                    "no": 5,
+                    "subGroup": [
+                      {
+                        "name": "�ppen Kaffe",
+                        "incl": 60,
+                        "no": 3
+                      },
+                      {
+                        "name": "Kaffe",
+                        "incl": 50,
+                        "no": 2
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Dryck Alkohol",
+                "incl": 1761,
+                "subGroup": [
+                  {
+                    "name": "Stark�l",
+                    "incl": 690,
+                    "no": 10,
+                    "subGroup": [
+                      {
+                        "name": "Mariestads Export 50cl",
+                        "incl": 690,
+                        "no": 10
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Vin",
+                    "incl": 733,
+                    "no": 7,
+                    "subGroup": [
+                      {
+                        "name": "Glas Husets Vita",
+                        "incl": 69,
+                        "no": 1
+                      },
+                      {
+                        "name": "Altos Las Hormigas Malbec Classico",
+                        "incl": 319,
+                        "no": 1
+                      },
+                      {
+                        "name": "Glas Husets R�da",
+                        "incl": 345,
+                        "no": 5
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Sprit",
+                    "incl": 338,
+                    "no": 11,
+                    "subGroup": [
+                      {
+                        "name": "Drink 4cl",
+                        "incl": 98,
+                        "no": 1
+                      },
+                      {
+                        "name": "Whiskey per cl",
+                        "incl": 240,
+                        "no": 10
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "�vrigt",
+                "incl": 890,
+                "subGroup": [
+                  {
+                    "name": "Presentkort",
+                    "incl": 890,
+                    "no": 1,
+                    "subGroup": [
+                      {
+                        "name": "Presentkort",
+                        "incl": 890,
+                        "no": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
