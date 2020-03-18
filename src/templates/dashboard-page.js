@@ -1,28 +1,53 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { get } from 'lodash'
 import Layout from '../components/Layout'
 import { HTMLContent } from '../components/Content'
 import LineGraph from '../components/graphs/Line'
-import Bookings from '../components/graphs/data/LineGraphData_bok'
+import HistoryGraph from '../components/graphs/HistoryGraph'
 
 export const DashboardPageTemplate = ({ title, graphData }) => {
 //   const PageContent = contentComponent || Content
+const [tab, setTab] = useState(1);
   return (
     <section className="section section--gradient">
       <div className="container">
         <div className="columns">
           <div className="column">
             <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <div className="columns">
-                <div className="column" style={{height: '300px'}}>
-                <LineGraph data={Bookings} title={'Charlottenberg'} />
+            <div
+            id="navMenu"
+            //className={`navbar-menu ${this.state.navBarActiveClass}`}
+          >
+            <div className="navbar-start has-text-centered">
+            <div className="navbar-item" onClick={() => setTab(1)}> 
+                Översikt
+              </div>
+              <div className="navbar-item" onClick={() => setTab(2)}>
+                14 dagar
+              </div>
+            </div>
+            <div className="navbar-end has-text-centered">
+            </div>
+          </div>
+              <div className="columns" style={{display: (tab === 1) ? 'block' : 'none' }}>
+                <div className="column" style={{height: '400px'}}>
+                <h3 className="title is-size-3 has-text-weight-bold is-bold-light">
+                Översikt omsättning per månad
+              </h3>
+                  <HistoryGraph title={'Charlottenberg'} />
                 </div>
+              </div>
+
+              <div className="columns" style={{display: tab === 2 ? 'block' : 'none' }}>
+                <div className="column" style={{height: '400px'}}>
+                <h3 className="title is-size-3 has-text-weight-bold is-bold-light">
+                Översikt inkomst/utgift 14 dagar
+              </h3>
+                  <LineGraph title={'Charlottenberg'} />
                 </div>
+              </div>
             </div>
           </div>
         </div>
