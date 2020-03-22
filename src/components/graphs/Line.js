@@ -6,26 +6,14 @@ import {
 import moment from 'moment-with-locales-es6';
 import regression from 'regression';
 
-function groupBy(list, keyGetter) {
-  const map = new Map();
-  list.forEach((item) => {
-       const key = keyGetter(item);
-       const collection = map.get(key);
-       if (!collection) {
-           map.set(key, [item]);
-       } else {
-           collection.push(item);
-       }
-  });
-  return map;
-};
+import config from '../../config.json';
 
-const LineGraph = ({ title, data /* see data tab */ }) => {
-    // Client-side Runtime Data Fetching
+const LineGraph = ({ hotelId /* see data tab */ }) => {
     const startDate = moment().subtract(14, 'days').calendar(); // '2020-02-01';
     const endDate = moment().format("MM/DD/YYYY"); // '2020-02-29';
-    const hotelId = '5c99e138293f69177d22257d';
+    // const hotelId = '5c99e138293f69177d22257d';
     const [periodData, setPeriodData] = useState([]);
+    // const [hotelId, sethotelId] = useState('5e75344b1c9d440000effd9b');
 
   useEffect(() => {
     // get data from GitHub api
@@ -70,7 +58,10 @@ const LineGraph = ({ title, data /* see data tab */ }) => {
       .then(resultData => {
         const res = [];
 
-        let r = resultData && resultData.data.transactions.map(d => { 
+        let r = resultData
+          && resultData.data
+          && resultData.data.transactions
+          && resultData.data.transactions.map(d => { 
           let t = moment(parseInt(d.createdAt));
             return({
               x: t.format('DD'),
@@ -84,11 +75,11 @@ const LineGraph = ({ title, data /* see data tab */ }) => {
 
         setPeriodData(r);
       })
-  }, []);
+  }, [hotelId]);
 
     return(
     <React.Fragment>
-    <h3>{`${title} ${startDate} - ${endDate}`}</h3>
+    {/* <h3>{`${title} ${startDate} - ${endDate}`}</h3> */}
 
     <ResponsiveContainer width="100%" height="100%">
     <BarChart

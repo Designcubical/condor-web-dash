@@ -1,0 +1,20 @@
+{
+    "hotels": [
+        {
+            "name": "Hotell Charlottenberg",
+            "hotelId": "5e75344b1c9d440000effd9b"
+        },
+        {
+            "name": "Hotell Statt",
+            "hotelId": "5e7537a31c9d440000effd9e"
+        },
+        {
+            "name": "Hotell Årjäng",
+            "hotelId": "5e7536991c9d440000effd9c"
+        },
+        {
+            "name": "Hotell Nobel",
+            "hotelId": "5e7537171c9d440000effd9d"
+        }
+    ]
+}

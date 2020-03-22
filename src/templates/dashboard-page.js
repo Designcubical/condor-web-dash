@@ -8,35 +8,46 @@ import LineGraph from '../components/graphs/Line'
 import HistoryGraph from '../components/graphs/HistoryGraph'
 
 export const DashboardPageTemplate = ({ title, graphData }) => {
-//   const PageContent = contentComponent || Content
+const [hotelId, setHotelId] = useState('5e75344b1c9d440000effd9b');
 const [tab, setTab] = useState(1);
+
   return (
-    <section className="section section--gradient">
+    <section className="section">
       <div className="container">
         <div className="columns">
           <div className="column">
             <div className="section">
-            <div
-            id="navMenu"
-            //className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-start has-text-centered">
-            <div className="navbar-item" onClick={() => setTab(1)}> 
-                Översikt
-              </div>
-              <div className="navbar-item" onClick={() => setTab(2)}>
-                14 dagar
-              </div>
-            </div>
-            <div className="navbar-end has-text-centered">
-            </div>
-          </div>
+            <div className="tabs">
+          <div className="tabs is-boxed">
+  <ul>
+    <li className={hotelId === '5e75344b1c9d440000effd9b' ? "is-active" : ""}><a onClick={() => setHotelId('5e75344b1c9d440000effd9b')}>Hotell Charlottenberg</a></li>
+    <li className={hotelId === '5e7537a31c9d440000effd9e' ? "is-active" : ""}><a onClick={() => setHotelId('5e7537a31c9d440000effd9e')}>Statt Kristinehamn</a></li>
+    <li className={hotelId === '5e7536991c9d440000effd9c' ? "is-active" : ""}><a onClick={() => setHotelId('5e7536991c9d440000effd9c')}>Hotell Årjäng</a></li>
+    <li className={hotelId === '5e7537171c9d440000effd9d' ? "is-active" : ""}><a onClick={() => setHotelId('5e7537171c9d440000effd9d')}>Hotell Nobel</a></li>
+  </ul>
+</div>
+</div>
+            <div className="field has-addons">
+  <p className="control">
+    <button className="button"
+    onClick={() => setTab(1)}
+    >
+      <span>Översikt</span>
+    </button>
+  </p>
+  <p className="control">
+    <button className="button"
+    onClick={() => setTab(2)}>
+      <span>14 dagar</span>
+    </button>
+  </p>
+</div>
               <div className="columns" style={{display: (tab === 1) ? 'block' : 'none' }}>
                 <div className="column" style={{height: '400px'}}>
                 <h3 className="title is-size-3 has-text-weight-bold is-bold-light">
                 Översikt omsättning per månad
               </h3>
-                  <HistoryGraph title={'Charlottenberg'} />
+                  <HistoryGraph hotelId={hotelId} />
                 </div>
               </div>
 
@@ -45,7 +56,7 @@ const [tab, setTab] = useState(1);
                 <h3 className="title is-size-3 has-text-weight-bold is-bold-light">
                 Översikt inkomst/utgift 14 dagar
               </h3>
-                  <LineGraph title={'Charlottenberg'} />
+                  <LineGraph hotelId={hotelId} />
                 </div>
               </div>
             </div>
