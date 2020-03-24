@@ -79,7 +79,7 @@ const LineGraph = ({ hotelId /* see data tab */ }) => {
 
     return(
     <React.Fragment>
-    {/* <h3>{`${title} ${startDate} - ${endDate}`}</h3> */}
+    <h3>{`${startDate} - ${endDate}`}</h3>
 
     <ResponsiveContainer width="100%" height="100%">
     <BarChart

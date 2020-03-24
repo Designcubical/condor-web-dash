@@ -22,11 +22,11 @@ function groupBy(list, keyGetter) {
   return map;
 }
 
-const HistoryGraph = ({ title, data /* see data tab */ }) => {
+const HistoryGraph = ({ hotelId, data /* see data tab */ }) => {
     // Client-side Runtime Data Fetching
     const startDate = moment('2020-01-01').format("MM/DD/YYYY"); // moment().subtract(14, 'days').calendar(); // '2020-02-01';
-    const endDate = moment().format("MM/DD/YYYY"); // '2020-02-29';
-    const hotelId = '5c99e138293f69177d22257d';
+    const endDate = moment('2020-12-31').format("MM/DD/YYYY"); // '2020-02-29';
+    // const hotelId = '5e75344b1c9d440000effd9b';
     const [periodData, setPeriodData] = useState([]);
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const HistoryGraph = ({ title, data /* see data tab */ }) => {
               enddate: "${endDate}"
             ) {
               createdAt
-              hotelSystem {
+              hotelSystem12 {
                 name
                 income {
                   totals
@@ -76,7 +76,7 @@ const HistoryGraph = ({ title, data /* see data tab */ }) => {
             return({
               x: t.format('DD'),
               m: t.format('MM'),
-              Hotell: d.hotelSystem[0] && d.hotelSystem[0].income ? floor(d.hotelSystem[0].income.totals) : 0,
+              Hotell: d.hotelSystem12[0] && d.hotelSystem12[0].income ? floor(d.hotelSystem12[0].income.totals) : 0,
               Trivec: d.posSystem[0] && d.posSystem[0].income ? floor(d.posSystem[0].income.incl) : 0,
               Caspeco: d.staffSystem[0] && d.staffSystem[0].expense ? floor(d.staffSystem[0].expense.incl) : 0
             })
@@ -110,11 +110,11 @@ const HistoryGraph = ({ title, data /* see data tab */ }) => {
 
         setPeriodData(rr);
       });
-  }, []);
+  }, [hotelId]);
 
     return(
     <React.Fragment>
-    <h3>{`${title} ${startDate} - ${endDate}`}</h3>
+    <h3>{`${startDate} - ${endDate}`}</h3>
 
     <ResponsiveContainer width="100%" height="100%">
     <AreaChart
