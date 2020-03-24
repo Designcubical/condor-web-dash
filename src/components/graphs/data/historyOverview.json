@@ -1,6 +1,6 @@
-{
+[{
   "name": "Årssammanställning per månad - Charlottenberg",
-  "hotelId": "5c99e138293f69177d22257d",
+  "hotelId": "5e75344b1c9d440000effd9b",
   "updated": "2020-03-18",
   "type": "hotel",
   "data": [
@@ -89,4 +89,280 @@
       }
     }
   ]
-}
+},
+{
+  "name": "Årssammanställning per månad - Statt Kristinehamn",
+  "hotelId": "5e7537a31c9d440000effd9e",
+  "updated": "2020-03-18",
+  "type": "hotel",
+  "data": [
+    {
+      "month": 1,
+      "values": {
+        "tot_2018": 868630,
+        "tot_2019": 581844
+      }
+    },
+    {
+      "month": 2,
+      "values": {
+        "tot_2018": 1005554,
+        "tot_2019": 1339022
+      }
+    },
+    {
+      "month": 3,
+      "values": {
+        "tot_2018": 976600,
+        "tot_2019": 1201276
+      }
+    },
+    {
+      "month": 4,
+      "values": {
+        "tot_2018": 1089478,
+        "tot_2019": 1225717
+      }
+    },
+    {
+      "month": 5,
+      "values": {
+        "tot_2018": 1449626,
+        "tot_2019": 1217141
+      }
+    },
+    {
+      "month": 6,
+      "values": {
+        "tot_2018": 1105209,
+        "tot_2019": 1196298
+      }
+    },
+    {
+      "month": 7,
+      "values": {
+        "tot_2018": 1314660,
+        "tot_2019": 1566456
+      }
+    },
+    {
+      "month": 8,
+      "values": {
+        "tot_2018": 1231615,
+        "tot_2019": 1402611
+      }
+    },
+    {
+      "month": 9,
+      "values": {
+        "tot_2018": 1300526,
+        "tot_2019": 1147158
+      }
+    },
+    {
+      "month": 10,
+      "values": {
+        "tot_2018": 1321864,
+        "tot_2019": 1993813
+      }
+    },
+    {
+      "month": 11,
+      "values": {
+        "tot_2018": 1033631,
+        "tot_2019": 2001798
+      }
+    },
+    {
+      "month": 12,
+      "values": {
+        "tot_2018": 1459864,
+        "tot_2019": 0
+      }
+    }
+  ]
+},
+{
+  "name": "Årssammanställning per månad - Årjäng",
+  "hotelId": "5e7536991c9d440000effd9c",
+  "updated": "2020-03-18",
+  "type": "hotel",
+  "data": [
+    {
+      "month": 1,
+      "values": {
+        "tot_2018": 554700,
+        "tot_2019": 812141
+      }
+    },
+    {
+      "month": 2,
+      "values": {
+        "tot_2018": 557549,
+        "tot_2019": 871378
+      }
+    },
+    {
+      "month": 3,
+      "values": {
+        "tot_2018": 949945,
+        "tot_2019": 1160706
+      }
+    },
+    {
+      "month": 4,
+      "values": {
+        "tot_2018": 750440,
+        "tot_2019": 1131094
+      }
+    },
+    {
+      "month": 5,
+      "values": {
+        "tot_2018": 978520,
+        "tot_2019": 1082057
+      }
+    },
+    {
+      "month": 6,
+      "values": {
+        "tot_2018": 1025061,
+        "tot_2019": 931509
+      }
+    },
+    {
+      "month": 7,
+      "values": {
+        "tot_2018": 1295411,
+        "tot_2019": 1603849
+      }
+    },
+    {
+      "month": 8,
+      "values": {
+        "tot_2018": 992606,
+        "tot_2019": 1182343
+      }
+    },
+    {
+      "month": 9,
+      "values": {
+        "tot_2018": 1117936,
+        "tot_2019": 978029
+      }
+    },
+    {
+      "month": 10,
+      "values": {
+        "tot_2018": 1182820,
+        "tot_2019": 1129825
+      }
+    },
+    {
+      "month": 11,
+      "values": {
+        "tot_2018": 1150280,
+        "tot_2019": 799351
+      }
+    },
+    {
+      "month": 12,
+      "values": {
+        "tot_2018": 786983,
+        "tot_2019": 0
+      }
+    }
+  ]
+},
+{
+  "name": "Årssammanställning per månad - Nobel Karlskoga",
+  "hotelId": "5e7537171c9d440000effd9d",
+  "updated": "2020-03-18",
+  "type": "hotel",
+  "data": [
+    {
+      "month": 1,
+      "values": {
+        "tot_2018": 844425,
+        "tot_2019": 879950
+      }
+    },
+    {
+      "month": 2,
+      "values": {
+        "tot_2018": 1023666,
+        "tot_2019": 744814
+      }
+    },
+    {
+      "month": 3,
+      "values": {
+        "tot_2018": 799819,
+        "tot_2019": 835792
+      }
+    },
+    {
+      "month": 4,
+      "values": {
+        "tot_2018": 1047669,
+        "tot_2019": 898682
+      }
+    },
+    {
+      "month": 5,
+      "values": {
+        "tot_2018": 1482688,
+        "tot_2019": 1166548
+      }
+    },
+    {
+      "month": 6,
+      "values": {
+        "tot_2018": 1111980,
+        "tot_2019": 1056045
+      }
+    },
+    {
+      "month": 7,
+      "values": {
+        "tot_2018": 1161902,
+        "tot_2019": 1391923
+      }
+    },
+    {
+      "month": 8,
+      "values": {
+        "tot_2018": 1043006,
+        "tot_2019": 1450525
+      }
+    },
+    {
+      "month": 9,
+      "values": {
+        "tot_2018": 1395928,
+        "tot_2019": 1235654
+      }
+    },
+    {
+      "month": 10,
+      "values": {
+        "tot_2018": 1345736,
+        "tot_2019": 1185444
+      }
+    },
+    {
+      "month": 11,
+      "values": {
+        "tot_2018": 1111765,
+        "tot_2019": 1057942
+      }
+    },
+    {
+      "month": 12,
+      "values": {
+        "tot_2018": 717442,
+        "tot_2019": 0
+      }
+    }
+  ]
+}]

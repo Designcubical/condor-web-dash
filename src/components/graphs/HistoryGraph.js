@@ -99,13 +99,15 @@ const HistoryGraph = ({ hotelId, data /* see data tab */ }) => {
         });
         
         const lts = p.filter(pp => pp);
-        const rr = History.data.map((t, i) => {
-          return({
-            x: t.month,
-            Tot_2018: (t.values.tot_2018 ? floor(t.values.tot_2018) : 0),
-            Tot_2019: (t.values.tot_2019 ? floor(t.values.tot_2019) : 0),
-            Tot_2020: (lts[i] ? floor(lts[i].Tot_2020) : 0)
-          });
+        const rr = History
+          .filter(h => h.hotelId === hotelId)[0]
+          .data.map((t, i) => {
+            return({
+              x: t.month,
+              Tot_2018: (t.values.tot_2018 ? floor(t.values.tot_2018) : 0),
+              Tot_2019: (t.values.tot_2019 ? floor(t.values.tot_2019) : 0),
+              Tot_2020: (lts[i] ? floor(lts[i].Tot_2020) : 0)
+            });
         });
 
         setPeriodData(rr);
