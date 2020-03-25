@@ -29,14 +29,16 @@ const [tab, setTab] = useState(1);
 </div>
             <div className="field has-addons">
   <p className="control">
-    <button className="button"
-    onClick={() => setTab(1)}
+    <button 
+      className="button"
+      className={tab === 1 ? "button is-info is-selected" : "button"}
+      onClick={() => setTab(1)}
     >
       <span>Översikt</span>
     </button>
   </p>
   <p className="control">
-    <button className="button"
+    <button className={tab === 2 ? "button is-info is-selected" : "button"}
     onClick={() => setTab(2)}>
       <span>14 dagar</span>
     </button>
