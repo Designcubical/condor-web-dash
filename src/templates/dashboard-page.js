@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import { HTMLContent } from '../components/Content'
 import LineGraph from '../components/graphs/Line'
 import HistoryGraph from '../components/graphs/HistoryGraph'
+import LineGraphAll from '../components/graphs/LineAll'
 
 export const DashboardPageTemplate = ({ title, graphData }) => {
 const [hotelId, setHotelId] = useState('5e75344b1c9d440000effd9b');
@@ -24,6 +25,7 @@ const [tab, setTab] = useState(1);
     <li className={hotelId === '5e7537a31c9d440000effd9e' ? "is-active" : ""}><a onClick={() => setHotelId('5e7537a31c9d440000effd9e')}>Statt Kristinehamn</a></li>
     <li className={hotelId === '5e7536991c9d440000effd9c' ? "is-active" : ""}><a onClick={() => setHotelId('5e7536991c9d440000effd9c')}>Hotell Årjäng</a></li>
     <li className={hotelId === '5e7537171c9d440000effd9d' ? "is-active" : ""}><a onClick={() => setHotelId('5e7537171c9d440000effd9d')}>Hotell Nobel</a></li>
+    <li className={hotelId === '0' ? "is-active" : ""}><a onClick={() => setHotelId('0')}>Totalt</a></li>
   </ul>
 </div>
 </div>
@@ -49,7 +51,12 @@ const [tab, setTab] = useState(1);
                 <h3 className="title is-size-3 has-text-weight-bold is-bold-light">
                 Översikt omsättning per månad
               </h3>
-                  <HistoryGraph hotelId={hotelId} />
+                {
+                  hotelId !== '0' && <HistoryGraph hotelId={hotelId} />
+                }
+                {
+                  hotelId === '0' && <div>Inte tillgänglig, endast 14 dagar.</div>
+                }
                 </div>
               </div>
 
@@ -58,7 +65,12 @@ const [tab, setTab] = useState(1);
                 <h3 className="title is-size-3 has-text-weight-bold is-bold-light">
                 Översikt inkomst/utgift 14 dagar
               </h3>
-                  <LineGraph hotelId={hotelId} />
+                  {
+                    hotelId !== '0' && <LineGraph hotelId={hotelId} />
+                  }
+                  {
+                    hotelId === '0' && <LineGraphAll hotelId={hotelId} />
+                  }
                 </div>
               </div>
             </div>
